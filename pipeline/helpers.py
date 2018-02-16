@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # Copyright (c) 2018 Chris Heckler <hecklerchris@hotmail.com>
+import csv
 
 def read_csv(input_file):
-    data = []
+    data = {} 
     with open(input_file) as f:
-        reader = csv.reader(f, delimiter=',')
-        for row in reader:
-            data = [int(num) for num in row]
+        reader = csv.DictReader(f, delimiter=',')
+        data = reader
     return data
 
 def write_csv(data, output_file):
