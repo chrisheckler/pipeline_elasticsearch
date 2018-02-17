@@ -1,3 +1,9 @@
+# swap
+*.swp
+
+# json
+*.json
+
 # Csv
 *.csv
 
